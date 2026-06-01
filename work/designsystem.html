@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DS Studio — Alex Kostakis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="case-study.css">
+</head>
+<body>
+
+<div id="grain" aria-hidden="true"></div>
+<div id="progress-bar"></div>
+<div class="cursor"><div class="cursor__dot" id="cursor-dot"></div><div class="cursor__ring" id="cursor-ring"></div></div>
+
+<nav id="nav">
+    <a href="../index.html" class="nav__back">Back to work</a>
+    <span class="nav__project">DS Studio</span>
+    <a href="https://mail.google.com/mail/?view=cm&to=al.kostakis@gmail.com&subject=Project%20Inquiry" class="nav__cta" target="_blank" rel="noopener">Let's talk</a>
+</nav>
+
+<!-- HERO -->
+<section class="cs-hero">
+    <div class="cs-hero__eyebrow">
+        <span class="cs-hero__eyebrow-inner">06 &nbsp;·&nbsp; Product Design &nbsp;·&nbsp; Design Systems &nbsp;·&nbsp; SaaS</span>
+    </div>
+    <h1 class="cs-hero__title">
+        <span class="word"><span class="char">D</span><span class="char">S</span></span>
+        <span class="word"><span class="char">S</span><span class="char">t</span><span class="char">u</span><span class="char">d</span><span class="char">i</span><span class="char">o</span></span>
+    </h1>
+    <div class="cs-hero__meta">
+        <div class="cs-hero__meta-item">
+            <span class="cs-meta-label">Year</span>
+            <span class="cs-meta-value">2025</span>
+        </div>
+        <div class="cs-hero__meta-item">
+            <span class="cs-meta-label">Role</span>
+            <span class="cs-meta-value">Product Designer</span>
+        </div>
+        <div class="cs-hero__meta-item">
+            <span class="cs-meta-label">Type</span>
+            <span class="cs-meta-value">Side Project</span>
+        </div>
+        <div class="cs-hero__meta-item">
+            <span class="cs-meta-label">Tools</span>
+            <span class="cs-meta-value">Figma, Claude, Lovable</span>
+        </div>
+    </div>
+</section>
+
+<!-- OVERVIEW -->
+<div class="cs-section">
+    <div class="cs-section__inner">
+        <span class="cs-section__label">Overview</span>
+        <div class="cs-section__body">
+            <p class="cs-pull">Design tokens live in Figma. Components get rebuilt from scratch. Nobody trusts <em>the same source of truth.</em></p>
+            <p class="cs-text">DS Studio is a single platform bridging design and development — from raw tokens to Figma components to production-ready React code. I designed the full product from zero: the information architecture, component system, AI-powered builder, accessibility tooling, and Figma sync.</p>
+            <p class="cs-text">Built as a side project using <strong>Figma Make</strong> for the initial prototype and <strong>Lovable + Claude</strong> for rapid iteration — a process that validated the full design system in weeks rather than months.</p>
+        </div>
+    </div>
+</div>
+
+<!-- SCREENSHOTS 1 -->
+<div class="cs-screens">
+    <div class="cs-screens__grid cs-screens__grid--2">
+        <div class="cs-screen">
+            <img src="img/ds-1.png" alt="DS Studio — AI Component Builder" loading="lazy" style="object-position:top;">
+        </div>
+        <div class="cs-screen">
+            <img src="img/ds-2.png" alt="DS Studio — Accessibility checker WCAG 2.1" loading="lazy" style="object-position:top;">
+        </div>
+    </div>
+</div>
+
+<!-- PROBLEM -->
+<div class="cs-section cs-section--dark">
+    <div class="cs-section__inner">
+        <span class="cs-section__label">The Problem</span>
+        <div class="cs-section__body">
+            <p class="cs-pull">Design tokens, component specs, and live code all live in <em>different tools — owned by different people.</em></p>
+            <br>
+            <ul class="cs-solutions">
+                <li class="cs-solution">
+                    <span class="cs-solution__num">01</span>
+                    <div>
+                        <p class="cs-solution__title">No single source of truth</p>
+                        <p class="cs-solution__desc">Designers update tokens in Figma. Developers use hardcoded values in code. The two drift apart within weeks of launch — and nobody notices until a rebrand.</p>
+                    </div>
+                </li>
+                <li class="cs-solution">
+                    <span class="cs-solution__num">02</span>
+                    <div>
+                        <p class="cs-solution__title">Broken handoff pipeline</p>
+                        <p class="cs-solution__desc">Existing tools (Storybook, Zeroheight, Token Studio) each solve one part of the problem. Teams manage 3–5 tools to maintain one design system — creating fragility and duplication.</p>
+                    </div>
+                </li>
+                <li class="cs-solution">
+                    <span class="cs-solution__num">03</span>
+                    <div>
+                        <p class="cs-solution__title">Accessibility is an afterthought</p>
+                        <p class="cs-solution__desc">Contrast checks happen manually, late in the process. By the time contrast failures are caught, hundreds of token pairs are already baked into production.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- PROCESS -->
+<div class="cs-section">
+    <div class="cs-section__inner">
+        <span class="cs-section__label">Process</span>
+        <div class="cs-section__body">
+            <div class="cs-process">
+                <div class="cs-process__step">
+                    <span class="cs-process__num">01</span>
+                    <p class="cs-process__title">Research</p>
+                    <p class="cs-process__desc">Audited Storybook, Zeroheight, Token Studio, and Style Dictionary. Mapped pain points in the token-to-code pipeline across 5 design teams.</p>
+                </div>
+                <div class="cs-process__step">
+                    <span class="cs-process__num">02</span>
+                    <p class="cs-process__title">Architecture</p>
+                    <p class="cs-process__desc">Defined a 3-phase product roadmap: Core Foundations → Component Builder → Figma Sync. Each phase ships value independently.</p>
+                </div>
+                <div class="cs-process__step">
+                    <span class="cs-process__num">03</span>
+                    <p class="cs-process__title">Design</p>
+                    <p class="cs-process__desc">Full app UI in Figma Make — dark-first, density-focused, developer-friendly. Built the complete design system for the product itself using DS Studio.</p>
+                </div>
+                <div class="cs-process__step">
+                    <span class="cs-process__num">04</span>
+                    <p class="cs-process__title">Prototype</p>
+                    <p class="cs-process__desc">Interactive prototype covering all core flows. Used Claude and Lovable to validate token-to-component logic before committing to final designs.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SCREENSHOTS 2 -->
+<div class="cs-screens">
+    <div class="cs-screens__grid cs-screens__grid--2">
+        <div class="cs-screen">
+            <img src="img/ds-3.png" alt="DS Studio — Components library browser" loading="lazy" style="object-position:top;">
+        </div>
+        <div class="cs-screen">
+            <img src="img/ds-4.png" alt="DS Studio — Typography foundations" loading="lazy" style="object-position:top;">
+        </div>
+    </div>
+</div>
+
+<!-- SOLUTIONS -->
+<div class="cs-section cs-section--dark">
+    <div class="cs-section__inner">
+        <span class="cs-section__label">Key Features</span>
+        <div class="cs-section__body">
+            <ul class="cs-solutions">
+                <li class="cs-solution">
+                    <span class="cs-solution__num">01</span>
+                    <div>
+                        <p class="cs-solution__title">Foundations editor</p>
+                        <p class="cs-solution__desc">Full token management across Color, Typography, Spacing, Border Radius, Shadows, Motion, Grid, Opacity, Z-Index, and Icons — all in one editor with live preview and version history.</p>
+                    </div>
+                </li>
+                <li class="cs-solution">
+                    <span class="cs-solution__num">02</span>
+                    <div>
+                        <p class="cs-solution__title">AI Component Builder</p>
+                        <p class="cs-solution__desc">An in-app agent generates components tailored to your active tokens. 52 templates spanning Atom → Molecule → Organism levels, with React/TypeScript output and Monaco code view.</p>
+                    </div>
+                </li>
+                <li class="cs-solution">
+                    <span class="cs-solution__num">03</span>
+                    <div>
+                        <p class="cs-solution__title">Accessibility checker</p>
+                        <p class="cs-solution__desc">WCAG 2.1 contrast audit across all token color pairs — live, automatic, and actionable. One-click fix suggestions for failing pairs before they ever reach production.</p>
+                    </div>
+                </li>
+                <li class="cs-solution">
+                    <span class="cs-solution__num">04</span>
+                    <div>
+                        <p class="cs-solution__title">Figma Push & Token Export</p>
+                        <p class="cs-solution__desc">OAuth 2.0 Figma integration to push color, text, and effect styles directly to your files. W3C JSON and Style Dictionary export for developer consumption from day one.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- OUTCOMES -->
+<div class="cs-section">
+    <div class="cs-section__inner">
+        <span class="cs-section__label">Outcomes</span>
+        <div class="cs-section__body">
+            <div class="cs-outcomes">
+                <div class="cs-outcome">
+                    <span class="cs-outcome__num">52</span>
+                    <span class="cs-outcome__label">Components across Atom, Molecule & Organism levels</span>
+                </div>
+                <div class="cs-outcome">
+                    <span class="cs-outcome__num">3</span>
+                    <span class="cs-outcome__label">Phase roadmap — each phase independently deployable</span>
+                </div>
+                <div class="cs-outcome">
+                    <span class="cs-outcome__num">∞</span>
+                    <span class="cs-outcome__label">Token-to-code pipeline — zero manual handoff required</span>
+                </div>
+            </div>
+            <p class="cs-text">DS Studio proves that the gap between design and development is a tooling problem, not a people problem. By designing the full product end-to-end — including the AI agent UX, accessibility tooling, and Figma sync — I built a case for what the next generation of design system tooling should look like.</p>
+        </div>
+    </div>
+</div>
+
+<a href="pharmio.html" class="cs-next">
+    <div>
+        <span class="cs-next__label">Next project</span>
+        <span class="cs-next__title">Pharmio</span>
+    </div>
+    <span class="cs-next__arrow">↗</span>
+</a>
+
+<footer class="cs-footer">
+    <p>© 2025 Alex Kostakis</p>
+    <p><a href="../index.html" style="color:var(--muted);text-decoration:none;">← Back to portfolio</a></p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+gsap.registerPlugin(ScrollTrigger);
+const dot=document.getElementById('cursor-dot'),ring=document.getElementById('cursor-ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px';});
+(function loop(){rx+=(mx-rx)*0.12;ry+=(my-ry)*0.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(loop);})();
+document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>document.body.classList.add('cursor-hover'));el.addEventListener('mouseleave',()=>document.body.classList.remove('cursor-hover'));});
+const bar=document.getElementById('progress-bar');
+window.addEventListener('scroll',()=>{bar.style.width=(window.scrollY/(document.body.scrollHeight-window.innerHeight)*100)+'%';});
+const tl=gsap.timeline({defaults:{ease:'power4.out'}});
+tl.to('.cs-hero__eyebrow-inner',{y:0,duration:0.9,delay:0.2}).to('.cs-hero__title .char',{y:0,duration:1.1,stagger:{amount:0.3}},'-=0.5').from('.cs-hero__meta',{opacity:0,y:20,duration:0.7},'-=0.4');
+gsap.utils.toArray('.cs-section,.cs-screens,.cs-phones').forEach(el=>{gsap.from(el,{scrollTrigger:{trigger:el,start:'top 88%'},opacity:0,y:36,duration:0.8,ease:'power3.out'});});
+gsap.utils.toArray('.cs-solution').forEach((el,i)=>{gsap.from(el,{scrollTrigger:{trigger:el,start:'top 90%'},opacity:0,x:-24,duration:0.6,delay:i*0.07,ease:'power3.out'});});
+gsap.utils.toArray('.cs-outcome').forEach((el,i)=>{gsap.from(el,{scrollTrigger:{trigger:el,start:'top 88%'},opacity:0,y:28,duration:0.6,delay:i*0.1,ease:'power3.out'});});
+</script>
+</body>
+</html>
